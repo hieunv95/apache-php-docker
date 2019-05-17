@@ -11,6 +11,14 @@
     + Postfix: v3.1.12
 
 - Enviroment Variables:
+    + `HOST_IP`: Set Docker host's IP
+        ```
+        # Get IP from this command $(ip route show | grep docker0 | awk '{print $9}')
+        HOST_IP=<Docker host IP>
+        
+        # Example
+        HOST_IP=172.17.0.1
+        ```
     + `PHP_TZ` : Set timezone of `PHP` (https://www.php.net/manual/en/timezones.php)
         ```
         # Example
@@ -23,4 +31,8 @@
         
         # Example
         # MAIL_RELAY_HOST = [smtp.example.com]:25
+        ```
+    + `INSTALL_XDEBUG`: Install and enable `Xdebug`
+        ```
+        INSTALL_XDEBUG=true
         ```
